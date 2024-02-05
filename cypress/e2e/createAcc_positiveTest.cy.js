@@ -4,14 +4,14 @@ describe('Pembuatan Akun Baru', () => {
     cy.visit('https://magento.softwaretestingboard.com/customer/account/create/');
 
     // Mengisi formulir pendaftaran
-    cy.get('input[name="firstname"]').type('exampling');
-    cy.get('input[name="lastname"]').type('naming');
-    cy.get('input[name="email"]').type('examplename@example.com');
-    cy.get('input[name="password"]').type('Passing!123');
-    cy.get('input[name="password_confirmation"]').type('Passing!123');
+    cy.get('input[name="firstname"]').type('pengguna');
+    cy.get('input[name="lastname"]').type('akun');
+    cy.get('input[name="email"]').type('penggunaakun@example.com');
+    cy.get('input[name="password"]').type('kataSandi123!');
+    cy.get('input[name="password_confirmation"]').type('kataSandi123!');
 
     // Mengklik tombol untuk membuat akun
-    cy.get('button[type="submit"]').last().click({ multiple: true });
+    cy.get('.form-create-account').submit();
 
     // Verifikasi bahwa pendaftaran berhasil
     cy.contains('Thank you for registering with Main Website Store.').should('exist'); // Verifikasi teks
