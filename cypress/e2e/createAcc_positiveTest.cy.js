@@ -5,10 +5,10 @@ describe('Pembuatan Akun Baru', () => {
 
     // Mengisi formulir pendaftaran
     cy.get('input[name="firstname"]').type('exampling');
-    cy.get('input[name="lastname"]').type('code');
-    cy.get('input[name="email"]').type('examplingcode@example.com');
-    cy.get('input[name="password"]').type('kataSand!123');
-    cy.get('input[name="password_confirmation"]').type('kataSand!123');
+    cy.get('input[name="lastname"]').type('naming');
+    cy.get('input[name="email"]').type('examplename@example.com');
+    cy.get('input[name="password"]').type('Passing!123');
+    cy.get('input[name="password_confirmation"]').type('Passing!123');
 
     // Mengklik tombol untuk membuat akun
     cy.get('button[type="submit"]').last().click({ multiple: true });
